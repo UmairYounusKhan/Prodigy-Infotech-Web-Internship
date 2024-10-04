@@ -1,0 +1,54 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+section {
+    height: 100vh;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section:nth-of-type(odd) {
+    background-color: #eaeaea;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+p {
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.dev{
+    color: white;
+	-webkit-text-stroke: 1px #95ff00;
+	text-shadow: 4px 1px 4px #05bc66;
+}
+.pro{
+    color: white;
+	-webkit-text-stroke: 1px #e2b03b;
+	text-shadow: 4px 1px 4px #4ab514;
+}
+.inter{
+    color: white;
+	-webkit-text-stroke: 1px #14f8e9;
+	text-shadow: 4px 1px 4px #52bdab;
+}
+.hope{
+    color: white;
+	-webkit-text-stroke: 1px #ffb007;
+	text-shadow: 8px 1px 4px #4d514b;
+}
+

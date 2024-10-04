@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.body {
+  min-height: 100vh;
+  padding: 50px;
+  background: url('https://blog.butterfield.com/wp-content/uploads/2018/04/Tofane-Mountain-Range_Dolomites-banner-768x480.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.container {
+  background: rgba(134, 116, 81, 0.8);
+  color: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  width: 90%;
+  max-width: 520px;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  animation: slide-in 1s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weather__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+input {
+  border: none;
+  background: rgba(53, 53, 53, 0.8);
+  outline: none;
+  color: #ffffff;
+  padding: 0.75rem 2.5rem;
+  border-radius: 30px;
+  font-size: clamp(12px, 2vw, 16px);
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+input:focus {
+  background: rgba(53, 53, 53, 1);
+  transform: scale(1.05);
+}
+
+.weather__search {
+  position: relative;
+  margin: 1rem 0;
+}
+
+.weather__search i {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-size: 18px;
+  color: #d8e700;
+}
+
+.weather__units > span {
+  font-size: clamp(22px, 2.5vw, 24px);
+}
+
+.weather__units span {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.weather__units span:hover {
+  color: #d8e700;
+}
+
+.weather__body {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.weather__datetime {
+  margin-bottom: 2rem;
+  font-size: clamp(14px, 2vw, 16px);
+  color: #ffffff;
+}
+
+.weather__forecast {
+  background: rgba(81, 174, 174, 0.9);
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+}
+
+.weather__icon img {
+  width: 120px;
+}
+
+.weather__temperature {
+  font-size: clamp(26px, 3vw, 28px);
+}
+
+.weather__minmax {
+  display: flex;
+  justify-content: center;
+}
+
+.weather__minmax p {
+  font-size: clamp(14px, 1.5vw, 16px);
+  margin: 0.5rem;
+}
+
+.weather__info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  margin-top: 3rem;
+}
+
+.weather__card {
+  display: flex;
+  align-items: center;
+  background: rgba(30, 30, 30, 0.9);
+  padding: 1rem;
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+
+.weather__card:hover {
+  transform: scale(1.05);
+}
+
+.weather__card i {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.weather__card p {
+  font-size: clamp(12px, 1.5vw, 14px);
+}
+
+.weather__city {
+  font-size: clamp(20px, 3vw, 36px);
+  color: #f6f6f6;
+  font-weight: 600;
+}
+
+.weather__forecast p {
+  font-size: clamp(14px, 1.5vw, 16px);
+  color: #f6f6f6;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 936px) {
+  .container {
+    width: 90%;
+  }
+
+  .weather__header {
+    flex-direction: column;
+  }
+
+  .weather__units {
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .weather__body {
+    margin-top: 1rem;
+  }
+
+  .container {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .weather__info {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .body {
+    padding: 30px;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Star animation */
+.star {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(to right, #fcbb04, #fffc00);
+  border-radius: 60px;
+  display: inline-block;
+  position: absolute;
+}
+
+.starlight {
+  animation: shine 2s infinite;
+}
+
+@keyframes shine {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+/* Font face declarations remain unchanged */
